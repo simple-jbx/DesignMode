@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using DesignMode.simpleFactoryPattern;
 using DesignMode.stragetyPattern;
+using DesignMode.decoratorPattern;
 
 namespace DesignMode
 {
@@ -24,7 +25,7 @@ namespace DesignMode
             
             */
 
-            ///*
+            /*
             //策略模式测试
             Context context;
             context = new Context(new ConcreteStrategyA());
@@ -36,7 +37,20 @@ namespace DesignMode
             context = new Context(new ConcreteStrategyC());
             context.ContextInterface();
 
+            */
+
+            ConcreteComponent c = new ConcreteComponent();
+            ConcreteDecoratorA da = new ConcreteDecoratorA();
+            ConcreteDecoratorB db = new ConcreteDecoratorB();
+
+            da.SetComponent(c);
+            db.SetComponent(da);
+            db.Operation();
+
+
+
             Console.ReadLine();
+
         }
     }
 }
