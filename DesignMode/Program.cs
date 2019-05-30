@@ -7,6 +7,7 @@ using System.IO;
 using DesignMode.simpleFactoryPattern;
 using DesignMode.stragetyPattern;
 using DesignMode.decoratorPattern;
+using DesignMode.proxyPatten;
 
 namespace DesignMode
 {
@@ -23,7 +24,7 @@ namespace DesignMode
             double result = oper.GetResult();
             Console.Out.WriteLine(result);
             
-            */
+            //*/
 
             /*
             //策略模式测试
@@ -37,8 +38,10 @@ namespace DesignMode
             context = new Context(new ConcreteStrategyC());
             context.ContextInterface();
 
-            */
+            //*/
 
+            /*
+            //装饰者模式
             ConcreteComponent c = new ConcreteComponent();
             ConcreteDecoratorA da = new ConcreteDecoratorA();
             ConcreteDecoratorB db = new ConcreteDecoratorB();
@@ -46,6 +49,21 @@ namespace DesignMode
             da.SetComponent(c);
             db.SetComponent(da);
             db.Operation();
+            //*/
+
+
+            /*
+            SchoolGirl mm = new SchoolGirl();
+            mm.Name = "mm";
+
+            Proxy proxy = new Proxy(mm);
+
+            proxy.GiveDolls();
+            proxy.GiveFlowers();
+            proxy.GiveChocolate();
+            //*/
+
+
 
 
 
