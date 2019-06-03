@@ -8,6 +8,7 @@ using DesignMode.simpleFactoryPattern;
 using DesignMode.stragetyPattern;
 using DesignMode.decoratorPattern;
 using DesignMode.proxyPatten;
+using DesignMode.FactoryPattern;
 
 namespace DesignMode
 {
@@ -63,6 +64,15 @@ namespace DesignMode
             proxy.GiveChocolate();
             //*/
 
+            /*
+            //工厂方法测试
+            IFactory operFactory = new AddFactory();
+            Operation oper = operFactory.CreateOperation();
+            oper.NumberA = 1;
+            oper.NumberB = 2;
+            double result = oper.GetResult();
+            Console.Out.WriteLine(result);
+            //*/
 
 
 
