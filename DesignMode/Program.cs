@@ -9,6 +9,7 @@ using DesignMode.stragetyPattern;
 using DesignMode.decoratorPattern;
 using DesignMode.proxyPatten;
 using DesignMode.FactoryPattern;
+using DesignMode.Prototypepattern;
 
 namespace DesignMode
 {
@@ -74,7 +75,13 @@ namespace DesignMode
             Console.Out.WriteLine(result);
             //*/
 
+            ///*
+            //原型模式 深复制与浅复制
+            ConcretePrototype1 p1 = new ConcretePrototype1("I");
+            ConcretePrototype1 c1 = (ConcretePrototype1)p1.Clone();
+            Console.WriteLine("Cloned: {0}", c1.Id);
 
+            //*/
 
 
             Console.ReadLine();

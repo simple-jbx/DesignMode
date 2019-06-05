@@ -49,6 +49,7 @@
     <Compile Include="FactoryPattern\IFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prototypepattern\Prototype.cs" />
     <Compile Include="ProxyPatten\IGiveGift.cs" />
     <Compile Include="ProxyPatten\Proxy.cs" />
     <Compile Include="ProxyPatten\Pursuit.cs" />
@@ -63,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FactoryPattern\FactoryPattern.txt" />
+    <Content Include="Prototypepattern\Prototype.txt" />
     <Content Include="ProxyPatten\ProxyPatten.txt" />
   </ItemGroup>
   <ItemGroup />
