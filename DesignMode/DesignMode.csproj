@@ -58,6 +58,7 @@
     <Compile Include="SimpleFactoryPattern\OperationFactory.cs" />
     <Compile Include="StragetyPattern\Context.cs" />
     <Compile Include="StragetyPattern\Strategy.cs" />
+    <Compile Include="TemplateMethodPattern\TemplateMethod.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -66,6 +67,7 @@
     <Content Include="FactoryPattern\FactoryPattern.txt" />
     <Content Include="Prototypepattern\Prototype.txt" />
     <Content Include="ProxyPatten\ProxyPatten.txt" />
+    <Content Include="TemplateMethodPattern\TemplateMethod.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
