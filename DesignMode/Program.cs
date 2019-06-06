@@ -11,6 +11,7 @@ using DesignMode.proxyPatten;
 using DesignMode.FactoryPattern;
 using DesignMode.Prototypepattern;
 using DesignMode.TemplateMethodPattern;
+using DesignMode.FacadePattern;
 
 namespace DesignMode
 {
@@ -83,7 +84,7 @@ namespace DesignMode
             Console.WriteLine("Cloned: {0}", c1.Id);
             //*/
 
-            ///*
+            /*
             AbstractClass c;
             c = new ConcreteClassA();
             c.TemplateMethod();
@@ -91,6 +92,15 @@ namespace DesignMode
             c = new ConcreteClassB();
             c.TemplateMethod();
             //*/
+
+            /*
+            Facade facade = new Facade();
+
+            facade.MethodA();
+            facade.MethodB();
+
+            //*/
+
 
 
             Console.ReadLine();

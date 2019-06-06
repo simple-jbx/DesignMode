@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="DecoratorPattern\Component.cs" />
     <Compile Include="DecoratorPattern\Decorator.cs" />
+    <Compile Include="FacadePattern\Facade.cs" />
     <Compile Include="FactoryPattern\Factory.cs" />
     <Compile Include="FactoryPattern\IFactory.cs" />
     <Compile Include="Program.cs" />
@@ -64,6 +65,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FacadePattern\FacadePattern.txt" />
     <Content Include="FactoryPattern\FactoryPattern.txt" />
     <Content Include="Prototypepattern\Prototype.txt" />
     <Content Include="ProxyPatten\ProxyPatten.txt" />
