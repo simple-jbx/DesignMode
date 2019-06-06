@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Builderpattern\Builder.cs" />
     <Compile Include="DecoratorPattern\Component.cs" />
     <Compile Include="DecoratorPattern\Decorator.cs" />
     <Compile Include="FacadePattern\Facade.cs" />
@@ -65,6 +66,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Builderpattern\Builder.txt" />
     <Content Include="FacadePattern\FacadePattern.txt" />
     <Content Include="FactoryPattern\FactoryPattern.txt" />
     <Content Include="Prototypepattern\Prototype.txt" />

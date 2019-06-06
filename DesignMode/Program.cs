@@ -12,6 +12,7 @@ using DesignMode.FactoryPattern;
 using DesignMode.Prototypepattern;
 using DesignMode.TemplateMethodPattern;
 using DesignMode.FacadePattern;
+using DesignMode.Builderpattern;
 
 namespace DesignMode
 {
@@ -85,6 +86,7 @@ namespace DesignMode
             //*/
 
             /*
+            //模板方法
             AbstractClass c;
             c = new ConcreteClassA();
             c.TemplateMethod();
@@ -93,7 +95,9 @@ namespace DesignMode
             c.TemplateMethod();
             //*/
 
+
             /*
+            //外观模式
             Facade facade = new Facade();
 
             facade.MethodA();
@@ -101,6 +105,20 @@ namespace DesignMode
 
             //*/
 
+            /*
+            //建造者模式
+            Director director = new Director();
+            Builder b1 = new ConcreteBuilder1();
+            Builder b2 = new ConcreteBuilder2();
+
+            director.Construct(b1);
+            Product p1 = b1.GetResult();
+            p1.Show();
+
+            director.Construct(b2);
+            Product p2 = b2.GetResult();
+            p2.Show();
+            //*/
 
 
             Console.ReadLine();
