@@ -13,6 +13,7 @@ using DesignMode.Prototypepattern;
 using DesignMode.TemplateMethodPattern;
 using DesignMode.FacadePattern;
 using DesignMode.Builderpattern;
+using DesignMode.ObserverPattern;
 
 namespace DesignMode
 {
@@ -120,6 +121,20 @@ namespace DesignMode
             p2.Show();
             //*/
 
+            ///*
+            //观察者模式
+            ConcreteSubject s = new ConcreteSubject();
+            s.Attach(new ConcreteObserver(s, "X"));
+            s.Attach(new ConcreteObserver(s, "Y"));
+            s.Attach(new ConcreteObserver(s, "Z"));
+
+            s.SubjectState = "ABC";
+            s.Notify();
+
+            s.SubjectState = "DEF";
+            s.Notify();
+
+            //*/
 
             Console.ReadLine();
 
