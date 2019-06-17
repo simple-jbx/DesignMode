@@ -14,6 +14,7 @@ using DesignMode.TemplateMethodPattern;
 using DesignMode.FacadePattern;
 using DesignMode.Builderpattern;
 using DesignMode.ObserverPattern;
+using DesignMode.AdapterPattern;
 
 namespace DesignMode
 {
@@ -121,7 +122,7 @@ namespace DesignMode
             p2.Show();
             //*/
 
-            ///*
+            /*
             //观察者模式
             ConcreteSubject s = new ConcreteSubject();
             s.Attach(new ConcreteObserver(s, "X"));
@@ -136,6 +137,11 @@ namespace DesignMode
 
             //*/
 
+            ///*
+            //适配器模式
+            Target target = new Adapter();
+            target.Request();
+            //*/
             Console.ReadLine();
 
         }

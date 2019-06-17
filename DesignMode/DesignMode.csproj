@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactoryPattern\AbstractFactoryPattern.cs" />
+    <Compile Include="AdapterPattern\AdapterPattern.cs" />
     <Compile Include="Builderpattern\Builder.cs" />
     <Compile Include="DecoratorPattern\Component.cs" />
     <Compile Include="DecoratorPattern\Decorator.cs" />
