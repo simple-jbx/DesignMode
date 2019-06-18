@@ -15,6 +15,7 @@ using DesignMode.FacadePattern;
 using DesignMode.Builderpattern;
 using DesignMode.ObserverPattern;
 using DesignMode.AdapterPattern;
+using DesignMode.MementoPattern;
 
 namespace DesignMode
 {
@@ -137,10 +138,30 @@ namespace DesignMode
 
             //*/
 
-            ///*
+            /*
             //适配器模式
             Target target = new Adapter();
             target.Request();
+            //*/
+
+            ///*
+            //备忘录模式
+            //大战boss前
+            GameRole gameRole = new GameRole();
+            gameRole.GetInitState();
+            gameRole.StateDisplay();
+
+            //保存进度
+            RoleStateCaretaker stateAdmin = new RoleStateCaretaker();
+            stateAdmin.Memento = gameRole.SaveState();
+
+            //大战Boss时，损耗严重
+            gameRole.Fight();
+            gameRole.StateDisplay();
+
+            //恢复之前状态
+            gameRole.RecoveryState(stateAdmin.Memento);
+            gameRole.StateDisplay();
             //*/
             Console.ReadLine();
 

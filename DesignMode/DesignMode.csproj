@@ -51,6 +51,7 @@
     <Compile Include="FacadePattern\Facade.cs" />
     <Compile Include="FactoryPattern\Factory.cs" />
     <Compile Include="FactoryPattern\IFactory.cs" />
+    <Compile Include="MementoPattern\MementoPattern.cs" />
     <Compile Include="ObserverPattern\ObserverPattern.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +73,7 @@
     <Content Include="Builderpattern\Builder.txt" />
     <Content Include="FacadePattern\FacadePattern.txt" />
     <Content Include="FactoryPattern\FactoryPattern.txt" />
+    <Content Include="MementoPattern\MementoPattern.txt" />
     <Content Include="ObserverPattern\ObserverPattern.txt" />
     <Content Include="Prototypepattern\Prototype.txt" />
     <Content Include="ProxyPatten\ProxyPatten.txt" />
