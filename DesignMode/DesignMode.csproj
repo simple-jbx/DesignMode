@@ -51,6 +51,7 @@
     <Compile Include="FacadePattern\Facade.cs" />
     <Compile Include="FactoryPattern\Factory.cs" />
     <Compile Include="FactoryPattern\IFactory.cs" />
+    <Compile Include="IteratorPattern\IteratorPattern.cs" />
     <Compile Include="MementoPattern\MementoPattern.cs" />
     <Compile Include="ObserverPattern\ObserverPattern.cs" />
     <Compile Include="Program.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="ProxyPatten\SchoolGirl.cs" />
     <Compile Include="SimpleFactoryPattern\Operation.cs" />
     <Compile Include="SimpleFactoryPattern\OperationFactory.cs" />
+    <Compile Include="SingletonPattern\SingletonPattern.cs" />
     <Compile Include="StragetyPattern\Context.cs" />
     <Compile Include="StragetyPattern\Strategy.cs" />
     <Compile Include="TemplateMethodPattern\TemplateMethod.cs" />

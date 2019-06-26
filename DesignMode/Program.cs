@@ -16,6 +16,7 @@ using DesignMode.Builderpattern;
 using DesignMode.ObserverPattern;
 using DesignMode.AdapterPattern;
 using DesignMode.MementoPattern;
+using DesignMode.IteratorPattern;
 
 namespace DesignMode
 {
@@ -144,7 +145,7 @@ namespace DesignMode
             target.Request();
             //*/
 
-            ///*
+            /*
             //备忘录模式
             //大战boss前
             GameRole gameRole = new GameRole();
@@ -162,6 +163,24 @@ namespace DesignMode
             //恢复之前状态
             gameRole.RecoveryState(stateAdmin.Memento);
             gameRole.StateDisplay();
+            //*/
+
+            ///*
+            //迭代器模式
+            ConcreteAggregate concreteAggregate = new ConcreteAggregate();
+            concreteAggregate[0] = "大鸟";
+            concreteAggregate[1] = "小菜";
+            concreteAggregate[2] = "行李";
+            concreteAggregate[3] = "老外";
+
+            //Iterator i = new ConcreteIterator(concreteAggregate);
+            Iterator i = new ConcreteIteratorDesc(concreteAggregate);
+            object item = i.First();
+            while(!i.IsDone())
+            {
+                Console.WriteLine("{0} 请买车票！", i.CurrentItem());
+                i.Next();
+            }
             //*/
             Console.ReadLine();
 
