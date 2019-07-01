@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DesignMode.IteratorPattern
+namespace DesignPattern.IteratorPattern
 {
     //Iterator 迭代器抽象类
     abstract class Iterator

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignMode.stragetyPattern
+namespace DesignPattern.stragetyPattern
 {
     //策略模式还可以和工厂模式结合起来使用
     abstract class Strategy

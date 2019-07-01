@@ -1,11 +1,11 @@
-﻿using DesignMode.simpleFactoryPattern;
+﻿using DesignPattern.simpleFactoryPattern;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignMode.FactoryPattern
+namespace DesignPattern.FactoryPattern
 {
     //加法类工厂
     class AddFactory : IFactory

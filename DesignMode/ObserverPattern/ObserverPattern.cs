@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignMode.ObserverPattern
+namespace DesignPattern.ObserverPattern
 {
     abstract class Observer
     {

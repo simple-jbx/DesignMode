@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using DesignMode.simpleFactoryPattern;
-using DesignMode.stragetyPattern;
-using DesignMode.decoratorPattern;
-using DesignMode.proxyPatten;
-using DesignMode.FactoryPattern;
-using DesignMode.Prototypepattern;
-using DesignMode.TemplateMethodPattern;
-using DesignMode.FacadePattern;
-using DesignMode.Builderpattern;
-using DesignMode.ObserverPattern;
-using DesignMode.AdapterPattern;
-using DesignMode.MementoPattern;
-using DesignMode.IteratorPattern;
+using DesignPattern.simpleFactoryPattern;
+using DesignPattern.stragetyPattern;
+using DesignPattern.decoratorPattern;
+using DesignPattern.proxyPatten;
+using DesignPattern.FactoryPattern;
+using DesignPattern.Prototypepattern;
+using DesignPattern.TemplateMethodPattern;
+using DesignPattern.FacadePattern;
+using DesignPattern.Builderpattern;
+using DesignPattern.ObserverPattern;
+using DesignPattern.AdapterPattern;
+using DesignPattern.MementoPattern;
+using DesignPattern.IteratorPattern;
 
-namespace DesignMode
+namespace DesignPattern
 {
     class Program
     {
@@ -165,7 +165,7 @@ namespace DesignMode
             gameRole.StateDisplay();
             //*/
 
-            ///*
+            /*
             //迭代器模式
             ConcreteAggregate concreteAggregate = new ConcreteAggregate();
             concreteAggregate[0] = "大鸟";
@@ -181,9 +181,17 @@ namespace DesignMode
                 Console.WriteLine("{0} 请买车票！", i.CurrentItem());
                 i.Next();
             }
-            //*/
+            //*/        
+
             Console.ReadLine();
 
+            List<string> strList = new List<string>();
+
+
+            foreach(string item in strList)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }

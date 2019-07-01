@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignMode.AdapterPattern
+namespace DesignPattern.AdapterPattern
 {
     //客户所期待的接口。目标可以是具体的或抽象的类，也可以是接口。
     class Target

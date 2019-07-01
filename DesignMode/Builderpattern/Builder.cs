@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignMode.Builderpattern
+namespace DesignPattern.Builderpattern
 {
     //产品类
     class Product

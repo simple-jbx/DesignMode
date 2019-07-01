@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignMode.simpleFactoryPattern
+namespace DesignPattern.simpleFactoryPattern
 {
     //运算类
     public class Operation

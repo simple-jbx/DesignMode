@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignMode.stragetyPattern
+namespace DesignPattern.stragetyPattern
 {
     //上下文
     class Context

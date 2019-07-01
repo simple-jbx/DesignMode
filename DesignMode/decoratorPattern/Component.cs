@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignMode.decoratorPattern
+namespace DesignPattern.decoratorPattern
 {
     abstract class Component
     {

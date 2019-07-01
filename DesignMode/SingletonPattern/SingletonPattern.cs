@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignMode.SingletonPattern
+namespace DesignPattern.SingletonPattern
 {
     class SingletonPattern
     {
