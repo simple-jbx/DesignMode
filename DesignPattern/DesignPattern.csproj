@@ -52,6 +52,7 @@
     <Compile Include="FactoryPattern\Factory.cs" />
     <Compile Include="FactoryPattern\IFactory.cs" />
     <Compile Include="IteratorPattern\IteratorPattern.cs" />
+    <Compile Include="IteratorPattern\IteratorPatternV2.cs" />
     <Compile Include="MementoPattern\MementoPattern.cs" />
     <Compile Include="ObserverPattern\ObserverPattern.cs" />
     <Compile Include="Program.cs" />

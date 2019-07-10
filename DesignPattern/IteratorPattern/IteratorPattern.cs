@@ -5,10 +5,10 @@ namespace DesignPattern.IteratorPattern
     //Iterator 迭代器抽象类
     abstract class Iterator
     {
-        public abstract object First();
-        public abstract object Next();
-        public abstract bool IsDone();
-        public abstract object CurrentItem();
+        public abstract object First();//第一个
+        public abstract object Next();//下一个
+        public abstract bool IsDone();//是否结束
+        public abstract object CurrentItem();//当前这个
     }
 
     //Aggregate聚集抽象类
@@ -18,12 +18,17 @@ namespace DesignPattern.IteratorPattern
     }
 
     //具体聚集类 继承Aggregate
-    class ConcreteAggregate : Aggregate
+    class Passenger : Aggregate
     {
         private IList<object> items = new List<object>();
         public override Iterator CreateIterator()
         {
             return new ConcreteIterator(this);
+        }
+
+        public void getOn(string passengerName)
+        {
+            this.items.Add(passengerName);
         }
 
         //返回聚集总个数
@@ -39,57 +44,57 @@ namespace DesignPattern.IteratorPattern
     //ConcreteIterator具体迭代器类，继承Iterator, 顺序遍历
     class ConcreteIterator : Iterator
     {
-        private ConcreteAggregate aggregate;//定义了一个具体聚集对象
+        private Passenger passengers;//定义了一个具体聚集对象
         private int current = 0;
 
-        public ConcreteIterator(ConcreteAggregate aggregate)
+        public ConcreteIterator(Passenger passengers)
         {
-            this.aggregate = aggregate;
+            this.passengers = passengers;
         }
 
         //得到第一个聚集对象
         public override object First()
         {
-            return aggregate[0];
+            return passengers[0];
         }
 
         public override object Next()
         {
             object ret = null;
             current++;
-            if(current < aggregate.Count)
+            if(current < passengers.Count)
             {
-                ret = aggregate[current];
+                ret = passengers[current];
             }
             return ret;
         }
 
         public override bool IsDone()
         {
-            return current >= aggregate.Count ? true : false;
+            return current >= passengers.Count ? true : false;
         }
 
         public override object CurrentItem()
         {
-            return aggregate[current];
+            return passengers[current];
         }
     }
 
     //逆序遍历
     class ConcreteIteratorDesc : Iterator
     {
-        private ConcreteAggregate aggregate;
+        private Passenger passengers;
         private int current = 0;
 
-        public ConcreteIteratorDesc(ConcreteAggregate aggregate)
+        public ConcreteIteratorDesc(Passenger passengers)
         {
-            this.aggregate = aggregate;
-            current = aggregate.Count - 1;
+            this.passengers = passengers;
+            current = passengers.Count - 1;
         }
 
         public override object First()
         {
-            return aggregate[aggregate.Count - 1];
+            return passengers[passengers.Count - 1];
         }
 
         public override object Next()
@@ -98,14 +103,14 @@ namespace DesignPattern.IteratorPattern
             current--;
             if(current >= 0)
             {
-                ret = aggregate[current];
+                ret = passengers[current];
             }
             return ret;
         }
 
         public override object CurrentItem()
         {
-            return aggregate[current];
+            return passengers[current];
         }
 
         public override bool IsDone()

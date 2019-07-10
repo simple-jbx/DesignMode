@@ -17,6 +17,7 @@ using DesignPattern.ObserverPattern;
 using DesignPattern.AdapterPattern;
 using DesignPattern.MementoPattern;
 using DesignPattern.IteratorPattern;
+using System.Collections;
 
 namespace DesignPattern
 {
@@ -166,32 +167,39 @@ namespace DesignPattern
             //*/
 
             /*
-            //迭代器模式
-            ConcreteAggregate concreteAggregate = new ConcreteAggregate();
-            concreteAggregate[0] = "大鸟";
-            concreteAggregate[1] = "小菜";
-            concreteAggregate[2] = "行李";
-            concreteAggregate[3] = "老外";
+            //迭代器模式V1
+            Passenger bus324 = new Passenger();
+            bus324[0] = "大鸟";
+            bus324[1] = "小菜";
+            bus324[2] = "行李";
+            bus324[3] = "老外";
 
-            //Iterator i = new ConcreteIterator(concreteAggregate);
-            Iterator i = new ConcreteIteratorDesc(concreteAggregate);
+            //Iterator i = new ConcreteIterator(bus324);
+            Iterator i = new ConcreteIteratorDesc(bus324);
             object item = i.First();
             while(!i.IsDone())
             {
+                //System.Diagnostics.Debug.Print("{0} 请买车票！", i.CurrentItem()); 
                 Console.WriteLine("{0} 请买车票！", i.CurrentItem());
                 i.Next();
             }
-            //*/        
+            //*/
 
-            Console.ReadLine();
+            ///*
 
-            List<string> strList = new List<string>();
+            PassengerNET bus324 = new PassengerNET();
+            bus324[0] = "大鸟";
+            bus324[1] = "小菜";
+            bus324[2] = "行李";
+            bus324[3] = "老外";
 
-
-            foreach(string item in strList)
+            IEnumerator iterator = bus324.GetEnumerator();
+            while(iterator.MoveNext())
             {
-                Console.WriteLine(item);
+                Console.WriteLine("{0} 请买车票", iterator.Current);
             }
+            //*/
+            Console.ReadLine();
         }
     }
 }
