@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using DesignPattern.simpleFactoryPattern;
-using DesignPattern.stragetyPattern;
-using DesignPattern.decoratorPattern;
+using DesignPattern.StragetyPattern;
+//using DesignPattern.decoratorPattern;
 using DesignPattern.proxyPatten;
 using DesignPattern.FactoryPattern;
 using DesignPattern.Prototypepattern;
@@ -18,6 +18,7 @@ using DesignPattern.AdapterPattern;
 using DesignPattern.MementoPattern;
 using DesignPattern.IteratorPattern;
 using System.Collections;
+using DesignPattern.DecoratorPattern.demo;
 
 namespace DesignPattern
 {
@@ -220,6 +221,20 @@ namespace DesignPattern
                 Console.WriteLine("{0} 请买车票", iterator.Current);
             }
             //*/
+
+            IDecoratable camera = new Canon500D();
+
+            Decorator tripod = new Tripod();
+            Decorator flashLamp = new FlashLamp();
+            Decorator lens = new Lens();
+
+            tripod.ObjectToDecorate = lens;
+            lens.ObjectToDecorate = flashLamp;
+            flashLamp.ObjectToDecorate = camera;
+            //(tripod as IDecoratable).Decorate();
+            tripod.Decorate(lens).Decorate(flashLamp).Decorate(camera);
+            //tripod.Decorate();
+            (tripod as IDecoratable).Decorate();
             Console.ReadLine();
         }
     }

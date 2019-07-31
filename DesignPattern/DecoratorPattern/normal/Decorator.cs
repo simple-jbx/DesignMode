@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DesignPattern.decoratorPattern;
+using DesignPattern.DecoratorPattern;
 
-namespace DesignPattern.decoratorPattern
+namespace DesignPattern.DecoratorPattern
 {
     abstract class Decorator : Component
     {

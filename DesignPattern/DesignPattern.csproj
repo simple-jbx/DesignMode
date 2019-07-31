@@ -46,8 +46,9 @@
     <Compile Include="AbstractFactoryPattern\AbstractFactoryPattern.cs" />
     <Compile Include="AdapterPattern\AdapterPattern.cs" />
     <Compile Include="Builderpattern\Builder.cs" />
-    <Compile Include="DecoratorPattern\Component.cs" />
-    <Compile Include="DecoratorPattern\Decorator.cs" />
+    <Compile Include="DecoratorPattern\demo\Decorateor.cs" />
+    <Compile Include="DecoratorPattern\normal\Component.cs" />
+    <Compile Include="DecoratorPattern\normal\Decorator.cs" />
     <Compile Include="FacadePattern\Facade.cs" />
     <Compile Include="FactoryPattern\Factory.cs" />
     <Compile Include="FactoryPattern\IFactory.cs" />
@@ -72,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Builderpattern\Builder.txt" />

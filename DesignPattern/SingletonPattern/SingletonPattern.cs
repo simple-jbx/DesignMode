@@ -27,7 +27,7 @@ namespace DesignPattern.SingletonPattern
     {
         private static SingletonV2 instance;
 
-        //静态只读的进程辅助对象
+        //静态只读的辅助对象
         private static readonly object syncObject = new object();
 
         public SingletonV2 getInstance()
