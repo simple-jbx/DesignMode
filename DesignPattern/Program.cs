@@ -185,8 +185,8 @@ namespace DesignPattern
             }
             //*/
 
-            ///*
 
+            /*
             PassengerNET bus324 = new PassengerNET();
             bus324[0] = "大鸟";
             bus324[1] = "小菜";
@@ -195,6 +195,27 @@ namespace DesignPattern
 
             IEnumerator iterator = bus324.GetEnumerator();
             while(iterator.MoveNext())
+            {
+                Console.WriteLine("{0} 请买车票", iterator.Current);
+            }
+            //*/
+
+            /*foreach(var item in bus324)
+            {
+                Console.WriteLine("{0} 请买车票", item);
+            }*/
+
+            //*/
+
+            /*
+            PassengerNETGenerics bus324 = new PassengerNETGenerics();
+            bus324[0] = "大鸟";
+            bus324[1] = "小菜";
+            bus324[2] = "行李";
+            bus324[3] = "老外";
+
+            IEnumerator iterator = bus324.GetEnumerator();
+            while (iterator.MoveNext())
             {
                 Console.WriteLine("{0} 请买车票", iterator.Current);
             }

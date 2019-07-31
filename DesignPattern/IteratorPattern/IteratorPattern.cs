@@ -3,7 +3,7 @@
 namespace DesignPattern.IteratorPattern
 {
     //Iterator 迭代器抽象类
-    abstract class Iterator
+    public abstract class Iterator
     {
         public abstract object First();//第一个
         public abstract object Next();//下一个
@@ -12,13 +12,13 @@ namespace DesignPattern.IteratorPattern
     }
 
     //Aggregate聚集抽象类
-    abstract class Aggregate
+   public abstract class Aggregate
     {
         public abstract Iterator CreateIterator();//创建迭代器
     }
 
     //具体聚集类 继承Aggregate
-    class Passenger : Aggregate
+    public class Passenger : Aggregate
     {
         private IList<object> items = new List<object>();
         public override Iterator CreateIterator()
@@ -46,10 +46,16 @@ namespace DesignPattern.IteratorPattern
     {
         private Passenger passengers;//定义了一个具体聚集对象
         private int current = 0;
+        private PassengerNETGenerics passengerNETGenerics;
 
         public ConcreteIterator(Passenger passengers)
         {
             this.passengers = passengers;
+        }
+
+        public ConcreteIterator(PassengerNETGenerics passengerNETGenerics)
+        {
+            this.passengerNETGenerics = passengerNETGenerics;
         }
 
         //得到第一个聚集对象

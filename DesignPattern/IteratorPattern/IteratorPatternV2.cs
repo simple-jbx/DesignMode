@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace DesignPattern.IteratorPattern
 {
+    //非泛型
     public class PassengerNET : IEnumerable
     {
         private IList<object> items = new List<object>();       
 
         public void getOn(string passengerName)
         {
-            this.items.Add(passengerName);
+            items.Add(passengerName);
         }
 
         //返回聚集总个数
@@ -25,6 +26,7 @@ namespace DesignPattern.IteratorPattern
             set { items.Insert(index, value); }
         }
 
+        //里氏代换原则
         public IEnumerator GetEnumerator()
         {
             return new ConcreteIteratorNET(this);
